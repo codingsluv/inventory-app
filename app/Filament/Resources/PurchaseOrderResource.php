@@ -81,16 +81,7 @@ class PurchaseOrderResource extends Resource
                         $set('total_price', $totalAmount);
                     })
                     ->numeric()
-                    ->required()
-                    ->rule(function ($get) {
-                        $product = Product::find($get('product_id'));
-                        if (!$product) {
-                            return 'Product not found.';
-                        }
-                        return $product && $product->stock >= $get('quantity')
-                            ? true
-                            : 'Stock is insufficient.';
-                    }),
+                    ->required(),
                 Forms\Components\TextInput::make('total_price')
                     ->required()
                     ->required()

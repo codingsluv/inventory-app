@@ -33,4 +33,9 @@ class Product extends Model
     // public function getTotalStockAttribute(){
     //     return $this->stock + $this->stockout()->sum('qty') - $this->stockins()->sum('qty');
     // }
+
+    public function purchaseorders(){
+        return $this->hasMany(PurchaseOrder::class);
+    }
+
 }
