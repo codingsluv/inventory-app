@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Stockout extends Model
+class StockOut extends Model
 {
     protected $fillable = ['product_id', 'qty', 'reason'];
 
