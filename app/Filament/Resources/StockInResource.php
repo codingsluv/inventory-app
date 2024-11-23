@@ -17,7 +17,7 @@ class StockInResource extends Resource
 {
     protected static ?string $model = StockIn::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-arrow-down';
 
     public static function form(Form $form): Form
     {

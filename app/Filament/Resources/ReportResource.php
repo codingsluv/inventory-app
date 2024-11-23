@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SalesOrderResource\Pages;
-use App\Filament\Resources\SalesOrderResource\RelationManagers;
-use App\Models\SalesOrder;
+use App\Filament\Resources\ReportResource\Pages;
+use App\Filament\Resources\ReportResource\RelationManagers;
+use App\Models\Report;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class SalesOrderResource extends Resource
+class ReportResource extends Resource
 {
-    protected static ?string $model = SalesOrder::class;
+    protected static ?string $model = Report::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-credit-card';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
@@ -56,9 +56,9 @@ class SalesOrderResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSalesOrders::route('/'),
-            'create' => Pages\CreateSalesOrder::route('/create'),
-            'edit' => Pages\EditSalesOrder::route('/{record}/edit'),
+            'index' => Pages\ListReports::route('/'),
+            'create' => Pages\CreateReport::route('/create'),
+            'edit' => Pages\EditReport::route('/{record}/edit'),
         ];
     }
 }
